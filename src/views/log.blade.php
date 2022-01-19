@@ -185,7 +185,7 @@
         @foreach($folders as $folder)
           <div class="list-group-item">
             <?php
-            \Rap2hpoutre\LaravelLogViewer\LaravelLogViewer::DirectoryTreeStructure( $storage_path, $structure );
+            \Rap2hpoutre\LaravelStorageViewer\LaravelStorageViewer::DirectoryTreeStructure( $storage_path, $structure );
             ?>
 
           </div>

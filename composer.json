@@ -1,8 +1,8 @@
 {
-    "name": "rap2hpoutre/laravel-log-viewer",
+    "name": "rap2hpoutre/laravel-storage-viewer",
     "description": "A Laravel log reader",
     "license": "MIT",
-    "keywords": ["log", "log-reader", "log-viewer", "logging", "laravel", "lumen"],
+    "keywords": ["log", "log-reader", "storage-viewer", "logging", "laravel", "lumen"],
     "type": "laravel-package",
     "authors": [
         {
@@ -34,7 +34,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Rap2hpoutre\\LaravelLogViewer\\LaravelLogViewerServiceProvider"
+              "LaravelStorageViewerServiceProvider"
             ]
         }
     },

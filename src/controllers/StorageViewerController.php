@@ -1,6 +1,6 @@
 <?php
 
-namespace Rap2hpoutre\LaravelLogViewer;
+namespace Rap2hpoutre\LaravelStorageViewer;
 
 use Illuminate\Support\Facades\Crypt;
 
@@ -11,10 +11,10 @@ if (class_exists("\\Illuminate\\Routing\\Controller")) {
 }
 
 /**
- * Class LogViewerController
- * @package Rap2hpoutre\LaravelLogViewer
+ * Class StorageViewerController
+ * @package Rap2hpoutre\LaravelStorageViewer
  */
-class LogViewerController extends BaseController
+class StorageViewerController extends BaseController
 {
     /**
      * @var \Illuminate\Http\Request
@@ -22,21 +22,21 @@ class LogViewerController extends BaseController
     protected $request;
 
     /**
-     * @var LaravelLogViewer
+     * @var LaravelStorageViewer
      */
     private $log_viewer;
 
     /**
      * @var string
      */
-    protected $view_log = 'laravel-log-viewer::log';
+    protected $view_log = 'laravel-storage-viewer::log';
 
     /**
-     * LogViewerController constructor.
+     * StorageViewerController constructor.
      */
     public function __construct()
     {
-        $this->log_viewer = new LaravelLogViewer();
+        $this->log_viewer = new LaravelStorageViewer();
         $this->request = app('request');
     }
 
@@ -60,7 +60,8 @@ class LogViewerController extends BaseController
         }
 
         $data = [
-            'logs' => $this->log_viewer->all(),
+            //'logs' => $this->log_viewer->all(),
+            'logs' => null,
             'folders' => $this->log_viewer->getFolders(),
             'current_folder' => $this->log_viewer->getFolderName(),
             'folder_files' => $folderFiles,

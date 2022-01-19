@@ -1,8 +1,8 @@
-<?php namespace Rap2hpoutre\LaravelLogViewer;
+<?php namespace Rap2hpoutre\LaravelStorageViewer;
 
 use Illuminate\Support\ServiceProvider;
 
-class LaravelLogViewerServiceProvider extends ServiceProvider {
+class LaravelStorageViewerServiceProvider extends ServiceProvider {
 
     /**
      * Indicates if loading of the provider is deferred.
@@ -19,19 +19,19 @@ class LaravelLogViewerServiceProvider extends ServiceProvider {
     public function boot()
     {
         if (method_exists($this, 'package')) {
-            $this->package('rap2hpoutre/laravel-log-viewer', 'laravel-log-viewer', __DIR__ . '/../../');
+            $this->package('rap2hpoutre/laravel-storage-viewer', 'laravel-storage-viewer', __DIR__ . '/../../');
         }
 
         if (method_exists($this, 'loadViewsFrom')) {
-            $this->loadViewsFrom(__DIR__.'/../../views', 'laravel-log-viewer');
+            $this->loadViewsFrom(__DIR__.'/../../views', 'laravel-storage-viewer');
         }
         
         if (method_exists($this, 'publishes')) {
             $this->publishes([
-                   __DIR__.'/../../views' => base_path('/resources/views/vendor/laravel-log-viewer'),
+                   __DIR__.'/../../views' => base_path('/resources/views/vendor/laravel-storage-viewer'),
             ], 'views');
             $this->publishes([
-                __DIR__.'/../../config/logviewer.php' => $this->config_path('logviewer.php'),
+                __DIR__ . '/../../config/storageviewer.php' => $this->config_path('storageviewer.php'),
             ]);
 
         }

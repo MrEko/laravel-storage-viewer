@@ -25,8 +25,9 @@ composer require rap2hpoutre/laravel-log-viewer
 ```
 
 Add Service Provider to `config/app.php` in `providers` section
+
 ```php
-Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
+Rap2hpoutre\LaravelLogViewer\LaravelStorageViewerServiceProvider::class,
 ```
 
 Add a route in your web routes file:
@@ -43,8 +44,9 @@ composer require rap2hpoutre/laravel-log-viewer
 ```
 
 Add the following in `bootstrap/app.php`:
+
 ```php
-$app->register(\Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class);
+$app->register(\Rap2hpoutre\LaravelLogViewer\LaravelStorageViewerServiceProvider::class);
 ```
 
 Explicitly set the namespace in `app/Http/routes.php`:
@@ -65,7 +67,7 @@ php artisan vendor:publish \
 ``` 
 
 ### Edit configuration
-Publish `logviewer.php` configuration file into `/config/` for configuration customization:
+Publish `storageviewer.php` configuration file into `/config/` for configuration customization:
 
 ```bash
 php artisan vendor:publish \

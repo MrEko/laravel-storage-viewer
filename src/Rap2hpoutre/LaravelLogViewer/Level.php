@@ -1,10 +1,10 @@
 <?php
 
-namespace Rap2hpoutre\LaravelLogViewer;
+namespace Rap2hpoutre\LaravelStorageViewer;
 
 /**
  * Class Level
- * @package Rap2hpoutre\LaravelLogViewer
+ * @package Rap2hpoutre\LaravelStorageViewer
  */
 class Level
 {
