@@ -1,9 +1,10 @@
 <?php
 
-namespace Rap2hpoutre\LaravelStorageViewer;
+namespace Tests;
 
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
 use File;
+use Rap2hpoutre\LaravelStorageViewer\LaravelStorageViewer;
 
 /**
  * Class LaravelStorageViewerTest

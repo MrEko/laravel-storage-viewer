@@ -23,12 +23,12 @@
             "src/controllers"
         ],
         "psr-0": {
-            "Rap2hpoutre\\LaravelLogViewer\\": "src/"
+            "Rap2hpoutre\\LaravelStorageViewer\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Rap2hpoutre\\LaravelLogViewer\\Test\\": "tests/"
+            "Rap2hpoutre\\LaravelStorageViewer\\Test\\": "tests/"
         }
     },
     "extra": {
